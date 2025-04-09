@@ -13,3 +13,4 @@ tabulate>=0.8.6
 decorator>=4.4.2
 mini-racer>=0.12.4
 nest_asyncio>=1.6.0
+duckdb>=1.2.1

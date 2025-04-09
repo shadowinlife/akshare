@@ -77,3 +77,7 @@ docstring-code-format = false
 # This only has an effect when the `docstring-code-format` setting is
 # enabled.
 docstring-code-line-length = "dynamic"
+
+# Choose duckdb as the default SQL engine for Local Cache feature
+[project.optional-dependencies]
+local_cache = ["duckdb > = 1.2.1"]
