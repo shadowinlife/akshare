@@ -66,10 +66,6 @@ setuptools.setup(
         "qmt": [
             "akqmt",
         ],
-        # 这些是额外的依赖集合，可以通过 'pip install akshare[local_cache]' 安装
-        "local_cache": [
-            "duckdb"
-        ]
     },
     package_data={"": ["*.py", "*.json", "*.pk", "*.js", "*.zip"]},
     keywords=[

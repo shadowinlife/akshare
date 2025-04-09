@@ -5631,3 +5631,20 @@ try:
     from akqmt import xt_api
 except ImportError as e:
     pass
+
+"""
+DiskCache特性初始化. 当前通过环境变量配置开启.
+"""
+import os
+# 标识是否开启本地缓存
+g_disk_cache_enabled = False
+# 本地缓存对象
+g_disk_cache = None
+if os.environ.get("AKSHARE_LOCAL_CACHE_DIR") is not None:
+    try:
+        from akshare.local_cache.disk_cache import DiskCache
+        g_disk_cache = DiskCache()
+        g_disk_cache_enabled = g_disk_cache.is_active()
+    except Exception as e:
+        print(f"LocalCache init failed. Please check your environment. {e}")
+
